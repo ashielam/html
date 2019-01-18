@@ -1,0 +1,13 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root /var/www/amfab.store/html;
+        index index.html index.htm index.nginx-debian.html hello.html;
+
+        server_name amfab.store www.amfab.store;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}
